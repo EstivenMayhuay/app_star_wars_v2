@@ -25,7 +25,7 @@ export default function PeopleList () {
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-12">
-            <ul className={`menuPeople lg:col-span-3 bg-white lg:h-screen lg:overflow-hidden lg:overflow-y-scroll lg:border-r-2 lg:border-gray-100 ${data?.hideListPeople ? 'hidden': ''}]} lg:block`}>
+            <ul className={`menuPeople lg:col-span-3 bg-white lg:h-screen lg:overflow-hidden lg:overflow-y-scroll lg:border-r-2 lg:border-gray-100 ${data?.hideListPeople ? 'hidden': ''}]}`}>
                 {
                     data?.people.map((person, index) => (
                         <li key={index}>
@@ -35,7 +35,7 @@ export default function PeopleList () {
                 }
             </ul>
 
-            <div className={`contentInfo lg:col-span-9 bg-white lg:py-4 lg:px-10 ${data?.hideListPeople ? false : true}`}>
+            <div className={`contentInfo lg:col-span-9 bg-white lg:py-4 lg:px-10 ${data?.hideListPeople ? '' : 'hidden'}`}>
                 <div className="contentInfo__title pt-8 pl-4 pb-2">
                     <h2 className="size-17 font-bold color-ranv-text-dark">General Information</h2>
                 </div>
