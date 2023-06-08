@@ -25,7 +25,7 @@ export default function PeopleList () {
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-12">
-            <ul className={`menuPeople lg:col-span-3 bg-white lg:h-screen lg:overflow-hidden lg:overflow-y-scroll lg:border-r-2 lg:border-gray-100 ${data?.hideListPeople ? 'hidden': ''}]}`}>
+            <ul className={`menuPeople lg:col-span-3 bg-white lg:h-screen lg:overflow-hidden lg:overflow-y-scroll lg:border-r-2 lg:border-gray-100 ${data?.hideListPeople ? 'hidden': ''}}`}>
                 {
                     data?.people.map((person, index) => (
                         <li key={index}>
