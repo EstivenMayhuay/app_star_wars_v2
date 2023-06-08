@@ -37,7 +37,7 @@ export default function PeopleList () {
                 }
             </ul>
 
-            <div className={`contentInfo lg:col-span-9 bg-white lg:py-4 lg:px-10 ${data?.hideListPeople ? 'md:block' : 'hidden'}`}>
+            <div className={`contentInfo lg:col-span-9 bg-white lg:py-4 lg:px-10 md:block ${data?.hideListPeople ? '' : 'hidden'}`}>
                 <div className="contentInfo__title pt-8 pl-4 pb-2">
                     <h2 className="size-17 font-bold color-ranv-text-dark">General Information</h2>
                 </div>
