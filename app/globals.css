@@ -3,25 +3,64 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  scroll-behavior: smooth;
+
+  --ravn-black: #121212;
+  --ravn-text-black: #333;
+  --ravn-text-light: #828282;
+  --ravn-text-emphasie: #ec5757;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/sfprofont/SFPRODISPLAYMEDIUM.OTF');
+}
+
+* {
+  font-family: 'SF Pro Display';
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.bg-ravn-black {
+  background-color: var(--ravn-black);
+}
+
+.color-ranv-text-dark {
+  color: var(--ravn-text-black);
+}
+
+.color-ranv-text-light {
+  color: var(--ravn-text-light);
+}
+
+.size-17 {
+  font-size: 17px;
+}
+
+.text-h2-default {
+  color: rgba(0, 0, 0, 1);
+}
+
+.text-h2-low-emphasies {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.text-h2-high-emphasies {
+  color: var(--ravn-text-emphasie);
+}
+
+.text-p1-default {
+  font-size: 14px;
+  color: #000;
+}
+
+.text-p1-low-emphasies {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.menuPeople::-webkit-scrollbar {
+  display: none;
 }
