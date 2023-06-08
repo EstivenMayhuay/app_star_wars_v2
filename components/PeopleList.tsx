@@ -38,39 +38,45 @@ export default function PeopleList () {
             </ul>
 
             <div className={`contentInfo lg:col-span-9 bg-white lg:py-4 lg:px-10 md:block ${data?.hideListPeople ? '' : 'hidden'}`}>
-                <div className="contentInfo__title pt-8 pl-4 pb-2">
-                    <h2 className="size-17 font-bold color-ranv-text-dark">General Information</h2>
-                </div>
-                <ul className="px-4">
-                    <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
-                        <span className="color-ranv-text-light font-bold">Eye Color</span>
-                        <span className="font-bold">{currPerson && currPerson.eye_color}</span>
-                    </li>
-                    <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
-                        <span className="color-ranv-text-light font-bold">Hair Color</span>
-                        <span className="font-bold">{currPerson && currPerson.hair_color}</span>
-                    </li>
-                    <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
-                        <span className="color-ranv-text-light font-bold">Skin Color</span>
-                        <span className="font-bold">{currPerson && currPerson.skin_color}</span>
-                    </li>
-                    <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
-                        <span className="color-ranv-text-light font-bold">Birth Year</span>
-                        <span className="font-bold">{currPerson && currPerson.birth_year}</span>
-                    </li>
-                </ul>
+                {
+                    currPerson && (
+                        <>
+                            <div className="contentInfo__title pt-8 pl-4 pb-2">
+                                <h2 className="size-17 font-bold color-ranv-text-dark">General Information</h2>
+                            </div>
+                            <ul className="px-4">
+                                <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
+                                    <span className="color-ranv-text-light font-bold">Eye Color</span>
+                                    <span className="font-bold">{currPerson && currPerson.eye_color}</span>
+                                </li>
+                                <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
+                                    <span className="color-ranv-text-light font-bold">Hair Color</span>
+                                    <span className="font-bold">{currPerson && currPerson.hair_color}</span>
+                                </li>
+                                <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
+                                    <span className="color-ranv-text-light font-bold">Skin Color</span>
+                                    <span className="font-bold">{currPerson && currPerson.skin_color}</span>
+                                </li>
+                                <li className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
+                                    <span className="color-ranv-text-light font-bold">Birth Year</span>
+                                    <span className="font-bold">{currPerson && currPerson.birth_year}</span>
+                                </li>
+                            </ul>
 
-                <div className="contentInfo__title pt-8 pl-4 pb-2">
-                    <h2 className="size-17 font-bold color-ranv-text-dark">Vehicles</h2>
+                            <div className="contentInfo__title pt-8 pl-4 pb-2">
+                                <h2 className="size-17 font-bold color-ranv-text-dark">Vehicles</h2>
 
-                    <ul>
-                        {currPerson && currPerson.vehicles.map((vehicle, index) => (
-                            <li key={index} className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
-                                <span className="color-ranv-text-light font-bold">{vehicle.name}</span>
-                            </li>                        
-                        ))}
-                    </ul>
-                </div>
+                                <ul>
+                                    {currPerson && currPerson.vehicles.map((vehicle, index) => (
+                                        <li key={index} className="py-4 border-b-2 border-gray-100 size-17 flex justify-between">
+                                            <span className="color-ranv-text-light font-bold">{vehicle.name}</span>
+                                        </li>                        
+                                    ))}
+                                </ul>
+                            </div>
+                        </>
+                    )
+                }
             </div>
         </div>
     )
