@@ -23,13 +23,13 @@ export default function PeopleList () {
     
     if(data?.isError) return <h1 className="p-4 text-red-500 size-17 font-bold text-center">Failed to Load Data</h1>
 
-    if(data?.isLoading) return <LoadingIndicator />
-
     return (
         <div className="grid grid-cols-1 lg:grid-cols-12">
             <ul className={`menuPeople lg:col-span-3 bg-white lg:h-screen lg:overflow-hidden lg:overflow-y-scroll lg:border-r-2 lg:border-gray-100 ${data?.hideListPeople == false ? 'md:block' : 'hidden'}`}>
                 {
-                    data?.people.map((person, index) => (
+                    data?.isLoading
+                    ? <LoadingIndicator /> 
+                    : data?.people.map((person, index) => (
                         <li key={index}>
                             <PersonItem person={person} onclick={handleSetPerson}  /> 
                         </li>
