@@ -17,8 +17,6 @@ export default function PeopleList () {
 
     useEffect(() => {
         data?.updateTitlePage("People");
-        console.log(data?.hideListPeople);
-        
     }, [])
     
     if(data?.isError) return <h1 className="p-4 text-red-500 size-17 font-bold text-center">Failed to Load Data</h1>
